@@ -14,7 +14,7 @@
 
 import { Box3, Group, type Object3D } from 'three';
 import type { App, DioramaModule } from '../core/types';
-import { createTerrainSampler } from '../scene/terrain';
+import { createTerrainSampler, type TerrainFlattenAnchor } from '../scene/terrain';
 import { createLogger } from '../utils/logger';
 import { createLakeOutline } from '../water';
 import { INTEGRATION } from '../integrations';
@@ -27,6 +27,7 @@ import {
   WATER_BODIES,
   type BridgeId,
 } from '../scene/layout';
+import { TERRAIN_SPEC } from '../scene/constants';
 import { countMeshes, mergeByMaterial, type BatchStats } from './geometry';
 import { buildInstancedForest, buildRoadNetwork, buildWaterChannels } from './decor';
 
@@ -142,18 +143,27 @@ function bootstrapDistricts(app: App, assets: Object3D): void {
 }
 
 /**
- * Flattening anchors matching `environment.ts` — the terrain is flat inside
- * `flatInnerRadius` of each of these, so scenery there sits on `y ≈ 0`.
+ * Flattening anchors matching `environment.ts` — the terrain relief is zero
+ * inside an anchor's inner radius, so scenery there sits on a plateau.
+ *
+ * Districts get the building plateau radii; bridges / landmarks / station /
+ * channel mouths get the smaller prop pad (see `collectTerrainAnchors` in
+ * `scene/environment.ts`). The two lists **must stay identical**, otherwise the
+ * tree and kerb samplers would ride a different surface than the visible mesh.
  */
-function terrainAnchors(): Array<{ x: number; z: number }> {
-  const anchors: Array<{ x: number; z: number }> = [];
+function terrainAnchors(): TerrainFlattenAnchor[] {
+  const anchors: TerrainFlattenAnchor[] = [];
+  const pad = {
+    innerRadius: TERRAIN_SPEC.propInnerRadius,
+    outerRadius: TERRAIN_SPEC.propOuterRadius,
+  };
   for (const id of DISTRICT_ORDER) anchors.push(toPoint(DISTRICTS[id].placement.center));
-  for (const bridge of Object.values(BRIDGES)) anchors.push(toPoint(bridge.placement.center));
-  for (const landmark of Object.values(LANDMARKS)) anchors.push(toPoint(landmark.placement.center));
-  anchors.push(toPoint(STATION.placement.center));
+  for (const bridge of Object.values(BRIDGES)) anchors.push({ ...toPoint(bridge.placement.center), ...pad });
+  for (const landmark of Object.values(LANDMARKS)) anchors.push({ ...toPoint(landmark.placement.center), ...pad });
+  anchors.push({ ...toPoint(STATION.placement.center), ...pad });
   for (const channel of WATER_BODIES) {
     const mid = channel.outline[Math.floor(channel.outline.length / 2)];
-    anchors.push({ x: mid[0], z: mid[1] });
+    anchors.push({ x: mid[0], z: mid[1], ...pad });
   }
   return anchors;
 }

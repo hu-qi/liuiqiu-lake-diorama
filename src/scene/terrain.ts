@@ -10,11 +10,8 @@ import { createGrassTexture } from '../materials/textures';
 import { createRng, type Rng } from '../utils/random';
 import { clamp } from '../utils/math';
 import {
-  detailNoise,
-  flatMask,
-  lakeMask,
-  landformNoise,
   createTerrainHeightSampler,
+  terrainHeight,
   TERRAIN_INSET,
   type TerrainAnchor,
   type TerrainPhases,
@@ -34,15 +31,16 @@ export type TerrainFlattenAnchor = TerrainAnchor;
 /**
  * Builds the landscaped top surface of the pedestal.
  *
- * The surface is a gently undulating grass plane, inset from the pedestal edge
- * so a light sandstone rim stays visible. Height noise is suppressed inside the
- * lake footprint (terrain can never poke through the water) and flattened
- * around every building anchor (nothing floats / sinks).
+ * The surface is an undulating grass plane, inset from the pedestal edge so a
+ * light sandstone rim stays visible. Height noise is suppressed inside the lake
+ * footprint (terrain can never poke through the water) and flattened around
+ * every building anchor (nothing floats / sinks).
  *
- * Two noise octaves are summed:
- *  - a low-frequency landform that gives the plateau its silhouette;
- *  - a high-frequency micro relief (~25 % of the base) that breaks up large
- *    flat facets so the grass does not read as a plastic sheet.
+ * Three layers are summed by the shared `terrainHeight()` helper:
+ *  - a static basin bias that lifts every district plateau above the water;
+ *  - a low-frequency landform that gives the park its rolling silhouette;
+ *  - a high-frequency micro relief that breaks up large facets so the grass
+ *    does not read as a plastic sheet.
  */
 export function createTerrain(
   outline: LakeOutline,
@@ -56,13 +54,7 @@ export function createTerrain(
   geometry.rotateX(-Math.PI / 2);
 
   const rng = createRng(TERRAIN_SPEC.seed);
-  const phases: TerrainPhases = {
-    p1: rng.range(0, Math.PI * 2),
-    p2: rng.range(0, Math.PI * 2),
-    p3: rng.range(0, Math.PI * 2),
-    d1: rng.range(0, Math.PI * 2),
-    d2: rng.range(0, Math.PI * 2),
-  };
+  const phases = terrainPhases(TERRAIN_SPEC.seed);
 
   const positions = geometry.getAttribute('position') as BufferAttribute;
   const vertexCount = positions.count;
@@ -71,15 +63,13 @@ export function createTerrain(
   let minHeight = Number.POSITIVE_INFINITY;
   let maxHeight = Number.NEGATIVE_INFINITY;
 
+  // Displacement goes through the shared `terrainHeight()` — the *same*
+  // function the CPU sampler exposes. One formula ⇒ props can never drift
+  // from the visible mesh (the previous revision duplicated it inline).
   for (let i = 0; i < vertexCount; i += 1) {
     const x = positions.getX(i);
     const z = positions.getZ(i);
-    const mask = lakeMask(outline, x, z) * flatMask(anchors, x, z);
-    const height =
-      TERRAIN_SPEC.y +
-      (landformNoise(x, z, phases) * TERRAIN_SPEC.amplitude +
-        detailNoise(x, z, phases) * TERRAIN_SPEC.detailAmplitude) *
-        mask;
+    const height = terrainHeight(x, z, phases, outline, anchors);
     positions.setY(i, height);
     minHeight = Math.min(minHeight, height);
     maxHeight = Math.max(maxHeight, height);
@@ -132,10 +122,21 @@ export function createTerrainSampler(
   anchors: readonly TerrainFlattenAnchor[],
   seed: number = TERRAIN_SPEC.seed,
 ): (x: number, z: number) => number {
-  return createTerrainHeightSampler({ outline, phases: derivePhases(createRng(seed)), anchors });
+  return createTerrainHeightSampler({ outline, phases: terrainPhases(seed), anchors });
 }
 
-/** Consumes the same four draws `createTerrain` takes, in the same order. */
+/**
+ * The exact noise phases the terrain mesh is built from.
+ *
+ * Exported so the lakeside apron (and any future draped geometry) can sample
+ * the *same* surface: sharing the phases is what keeps the stone/grass seam
+ * watertight even when the land undulates.
+ */
+export function terrainPhases(seed: number = TERRAIN_SPEC.seed): TerrainPhases {
+  return derivePhases(createRng(seed));
+}
+
+/** Consumes the same five draws `createTerrain` takes, in the same order. */
 function derivePhases(rng: Rng): TerrainPhases {
   return {
     p1: rng.range(0, Math.PI * 2),

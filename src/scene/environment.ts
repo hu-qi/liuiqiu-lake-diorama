@@ -2,7 +2,12 @@ import { Box3, Group, Vector3 } from 'three';
 import type { UpdateCallback, WorldBundle } from '../core/types';
 import { createLogger } from '../utils/logger';
 import { createPedestal, type PedestalBundle } from './base';
-import { createTerrain, type TerrainBundle, type TerrainFlattenAnchor } from './terrain';
+import {
+  createTerrain,
+  terrainPhases,
+  type TerrainBundle,
+  type TerrainFlattenAnchor,
+} from './terrain';
 import { createLakesideGround, type LakesideBundle } from './lakeside';
 import {
   BRIDGES,
@@ -12,6 +17,7 @@ import {
   STATION,
   WATER_BODIES,
 } from './layout';
+import { TERRAIN_SPEC } from './constants';
 
 import { createLake, createLakeOutline, type LakeBundle, type LakeOutline } from '../water';
 
@@ -44,7 +50,14 @@ export function createEnvironment(): EnvironmentBundle {
 
   const pedestal = createPedestal();
   const terrain = createTerrain(outline, anchors);
-  const lakeside = createLakesideGround(outline);
+  // The apron drapes onto the *exact* terrain surface: same noise phases, same
+  // flatten anchors, same formula. This is what keeps the stone/grass seam and
+  // the lake/stone seam closed at any undulation amplitude.
+  const lakeside = createLakesideGround({
+    outline,
+    phases: terrainPhases(),
+    anchors,
+  });
   const lake = createLake(outline);
 
   group.add(pedestal.group, terrain.mesh, lakeside.mesh, lake.group);
@@ -107,11 +120,21 @@ export function createEnvironment(): EnvironmentBundle {
  *
  * Buildings are grounded on `y = 0` by `resolvePlacement`, so any undulation
  * beneath a footprint (or within a few metres of its wall) would expose a gap.
- * Districts dominate the list; bridges / the station / the capsule landmark are
- * added too so their approach ramps stay flat.
+ *
+ * Two anchor classes, matching `flatMask`'s two radius pairs:
+ *  - **districts** get the full building plateau (`flatInnerRadius` /
+ *    `flatOuterRadius`) — the largest footprints, with spur roads;
+ *  - **bridges / station / landmarks / channel mouths** get the smaller
+ *    `propInnerRadius` / `propOuterRadius` pad. They sit as close as 25 m to a
+ *    district centre, so a district-sized disc would reach into the plateau and
+ *    break its perfectly-flat guarantee.
  */
 function collectTerrainAnchors(): TerrainFlattenAnchor[] {
   const anchors: TerrainFlattenAnchor[] = [];
+  const pad = {
+    innerRadius: TERRAIN_SPEC.propInnerRadius,
+    outerRadius: TERRAIN_SPEC.propOuterRadius,
+  };
 
   for (const id of DISTRICT_ORDER) {
     const [x, z] = DISTRICTS[id].placement.center;
@@ -119,20 +142,20 @@ function collectTerrainAnchors(): TerrainFlattenAnchor[] {
   }
   for (const bridge of Object.values(BRIDGES)) {
     const [x, z] = bridge.placement.center;
-    anchors.push({ x, z });
+    anchors.push({ x, z, ...pad });
   }
   for (const landmark of Object.values(LANDMARKS)) {
     const [x, z] = landmark.placement.center;
-    anchors.push({ x, z });
+    anchors.push({ x, z, ...pad });
   }
   const [sx, sz] = STATION.placement.center;
-  anchors.push({ x: sx, z: sz });
+  anchors.push({ x: sx, z: sz, ...pad });
 
   // Water channels carve through the flat band between the lake and a district:
   // keep their banks flat so the ribbon never floats above rising grass.
   for (const channel of WATER_BODIES) {
     const mid = channel.outline[Math.floor(channel.outline.length / 2)];
-    anchors.push({ x: mid[0], z: mid[1] });
+    anchors.push({ x: mid[0], z: mid[1], ...pad });
   }
 
   return anchors;
