@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f0ece4" />
+    <meta
+      name="description"
+      content="华为上海练秋湖研发中心 · 高精度交互式 3D 数字沙盘（Huawei Lianqiu Lake Digital Diorama）"
+    />
+    <title>练秋湖数字沙盘 · Lianqiu Lake Diorama</title>
+    <style>
+      :root {
+        /* Scene backdrop: light beige-grey, per PROMPT.md §9.4 */
+        --page-bg: #f0ece4;
+        --ink: #2f2b26;
+        --ink-soft: #6b6459;
+        --accent: #8a7a63;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: radial-gradient(120% 120% at 50% 0%, #f7f4ee 0%, var(--page-bg) 55%, #e7e1d5 100%);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+          'Hiragino Sans GB', 'Microsoft YaHei', Roboto, Helvetica, Arial, sans-serif;
+        overflow: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      #app {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Three.js canvas host */
+      #scene-container {
+        position: absolute;
+        inset: 0;
+        touch-action: none;
+      }
+
+      #scene-container canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        outline: none;
+      }
+
+      /* ---------- Loading overlay ---------- */
+      #loading-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        background: linear-gradient(180deg, rgba(247, 244, 238, 0.94), rgba(240, 236, 228, 0.97));
+        backdrop-filter: blur(2px);
+        transition: opacity 0.7s ease;
+        pointer-events: all;
+      }
+
+      #loading-overlay[data-hidden='true'] {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .loading-mark {
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
+        border: 1px solid rgba(138, 122, 99, 0.35);
+        background: linear-gradient(145deg, #ffffff, #e9e3d7);
+        box-shadow: 0 12px 30px rgba(94, 84, 66, 0.18);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .loading-mark::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.9), transparent 60%);
+      }
+
+      .loading-title {
+        font-size: 15px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .loading-subtitle {
+        font-size: 13px;
+        color: var(--ink-soft);
+        letter-spacing: 0.08em;
+      }
+
+      .progress-track {
+        width: min(320px, 62vw);
+        height: 4px;
+        border-radius: 999px;
+        background: rgba(138, 122, 99, 0.18);
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        height: 100%;
+        width: 0%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #a9997b, #8a7a63 60%, #6f6149);
+        transition: width 0.25s ease;
+      }
+
+      #loading-status {
+        font-size: 12px;
+        color: var(--ink-soft);
+        min-height: 16px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* ---------- Diagnostics footer (dev only) ---------- */
+      #hud {
+        position: absolute;
+        left: 16px;
+        bottom: 14px;
+        z-index: 8;
+        font-size: 11px;
+        line-height: 1.5;
+        color: var(--ink-soft);
+        letter-spacing: 0.04em;
+        pointer-events: none;
+        user-select: none;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+      }
+
+      #hud[hidden] {
+        display: none;
+      }
+
+      #error-panel {
+        position: absolute;
+        right: 16px;
+        bottom: 14px;
+        z-index: 9;
+        max-width: 380px;
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 1px solid rgba(176, 90, 70, 0.4);
+        background: rgba(255, 246, 243, 0.94);
+        color: #8a3b2a;
+        font-size: 12px;
+        line-height: 1.5;
+        display: none;
+      }
+
+      #error-panel[data-visible='true'] {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="scene-container" aria-label="练秋湖数字沙盘三维场景"></div>
+
+      <!-- Loading progress UI: driven by src/main.ts -->
+      <div id="loading-overlay" data-hidden="false" role="status" aria-live="polite">
+        <div class="loading-mark"></div>
+        <div class="loading-title">Lianqiu Lake</div>
+        <div class="loading-subtitle">华为练秋湖研发中心 · 数字沙盘</div>
+        <div class="progress-track">
+          <div class="progress-bar" id="loading-progress-bar"></div>
+        </div>
+        <div id="loading-status">正在初始化渲染器…</div>
+      </div>
+
+      <div id="hud" hidden></div>
+      <div id="error-panel" data-visible="false" role="alert"></div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

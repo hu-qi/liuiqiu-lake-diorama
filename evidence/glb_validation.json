@@ -1,0 +1,1316 @@
+{
+  "modelRoot": "public/models",
+  "count": 17,
+  "passed": 17,
+  "results": [
+    {
+      "file": "public/models/bridges/LANDMARK_ARCH_BRIDGE.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=63092B bin=57768B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=1120"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "4 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[55.0, 7.99, 7.5]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=0.000（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 63092,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 1120,
+      "materialCount": 4,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -27.5,
+          0.0,
+          -3.75
+        ],
+        "max": [
+          27.5,
+          7.988,
+          3.75
+        ],
+        "size": [
+          55.0,
+          7.988,
+          7.5
+        ]
+      },
+      "ground": {
+        "minX": -27.5,
+        "minY": 0.0,
+        "minZ": -3.75
+      }
+    },
+    {
+      "file": "public/models/bridges/LANDMARK_CAPSULE_CENTER.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=272696B bin=235968B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=4620"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "5 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[76.12, 11.98, 34.0]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=0.000（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 272696,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 4620,
+      "materialCount": 5,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -38.06,
+          0.0,
+          -17.0
+        ],
+        "max": [
+          38.06,
+          11.98,
+          17.0
+        ],
+        "size": [
+          76.12,
+          11.98,
+          34.0
+        ]
+      },
+      "ground": {
+        "minX": -38.06,
+        "minY": 0.0,
+        "minZ": -17.0
+      }
+    },
+    {
+      "file": "public/models/bridges/LANDMARK_MOON_BRIDGE.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=108200B bin=104664B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=1988"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "3 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[20.72, 8.09, 6.0]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=0.000（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 108200,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 1988,
+      "materialCount": 3,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -10.359,
+          0.0,
+          -3.0
+        ],
+        "max": [
+          10.359,
+          8.09,
+          3.0
+        ],
+        "size": [
+          20.717,
+          8.09,
+          6.0
+        ]
+      },
+      "ground": {
+        "minX": -10.359,
+        "minY": 0.0,
+        "minZ": -3.0
+      }
+    },
+    {
+      "file": "public/models/bridges/LANDMARK_RAINBOW_BRIDGE.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=110400B bin=101736B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=2356"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "9 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[36.12, 10.73, 11.0]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=-0.000（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 110400,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 2356,
+      "materialCount": 9,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -18.06,
+          -0.0,
+          -5.5
+        ],
+        "max": [
+          18.06,
+          10.727,
+          5.5
+        ],
+        "size": [
+          36.12,
+          10.727,
+          11.0
+        ]
+      },
+      "ground": {
+        "minX": -18.06,
+        "minY": -0.0,
+        "minZ": -5.5
+      }
+    },
+    {
+      "file": "public/models/districts/DISTRICT_A_HILLTOP.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=2513300B bin=2340360B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=44948"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "20 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[112.0, 37.54, 92.2]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=-0.500（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 2513300,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 44948,
+      "materialCount": 20,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -56.0,
+          -0.5,
+          -46.205
+        ],
+        "max": [
+          56.0,
+          37.036,
+          46.0
+        ],
+        "size": [
+          112.0,
+          37.536,
+          92.205
+        ]
+      },
+      "ground": {
+        "minX": -56.0,
+        "minY": -0.5,
+        "minZ": -46.205
+      }
+    },
+    {
+      "file": "public/models/districts/DISTRICT_B_WATERTOWN.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=2154160B bin=1936548B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=37846"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "14 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[90.0, 9.09, 60.0]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=-1.000（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 2154160,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 37846,
+      "materialCount": 14,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -45.0,
+          -1.0,
+          -30.0
+        ],
+        "max": [
+          45.0,
+          8.085,
+          30.0
+        ],
+        "size": [
+          90.0,
+          9.085,
+          60.0
+        ]
+      },
+      "ground": {
+        "minX": -45.0,
+        "minY": -1.0,
+        "minZ": -30.0
+      }
+    },
+    {
+      "file": "public/models/districts/DISTRICT_C_URBAN_AXIS.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=5589832B bin=5399436B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=108050"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "13 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[110.0, 24.26, 65.62]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=-0.400（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 5589832,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 108050,
+      "materialCount": 13,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -55.0,
+          -0.4,
+          -32.81
+        ],
+        "max": [
+          55.0,
+          23.864,
+          32.81
+        ],
+        "size": [
+          110.0,
+          24.264,
+          65.62
+        ]
+      },
+      "ground": {
+        "minX": -55.0,
+        "minY": -0.4,
+        "minZ": -32.81
+      }
+    },
+    {
+      "file": "public/models/districts/DISTRICT_D_COLLEGE.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=2129796B bin=2013672B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=40264"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "15 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[120.0, 18.8, 94.0]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=-0.400（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 2129796,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 40264,
+      "materialCount": 15,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -60.0,
+          -0.4,
+          -45.0
+        ],
+        "max": [
+          60.0,
+          18.4,
+          49.0
+        ],
+        "size": [
+          120.0,
+          18.8,
+          94.0
+        ]
+      },
+      "ground": {
+        "minX": -60.0,
+        "minY": -0.4,
+        "minZ": -45.0
+      }
+    },
+    {
+      "file": "public/models/districts/DISTRICT_E_FOREST_TOWN.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=4619808B bin=4292124B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=79776"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "19 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[110.0, 9.16, 80.86]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=-0.400（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 4619808,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 79776,
+      "materialCount": 19,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -55.0,
+          -0.4,
+          -40.0
+        ],
+        "max": [
+          55.0,
+          8.761,
+          40.861
+        ],
+        "size": [
+          110.0,
+          9.161,
+          80.861
+        ]
+      },
+      "ground": {
+        "minX": -55.0,
+        "minY": -0.4,
+        "minZ": -40.0
+      }
+    },
+    {
+      "file": "public/models/districts/DISTRICT_F_PLAZA_TOWN.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=3327928B bin=3092556B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=58058"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "15 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[110.12, 16.4, 81.7]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=-0.400（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 3327928,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 58058,
+      "materialCount": 15,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -55.06,
+          -0.4,
+          -41.7
+        ],
+        "max": [
+          55.06,
+          16.0,
+          40.0
+        ],
+        "size": [
+          110.12,
+          16.4,
+          81.7
+        ]
+      },
+      "ground": {
+        "minX": -55.06,
+        "minY": -0.4,
+        "minZ": -41.7
+      }
+    },
+    {
+      "file": "public/models/districts/DISTRICT_G_URBAN_BLOCKS.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=3822612B bin=3666900B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=74696"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "15 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[120.0, 21.3, 90.0]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=-0.400（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 3822612,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 74696,
+      "materialCount": 15,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -60.0,
+          -0.4,
+          -45.0
+        ],
+        "max": [
+          60.0,
+          20.9,
+          45.0
+        ],
+        "size": [
+          120.0,
+          21.3,
+          90.0
+        ]
+      },
+      "ground": {
+        "minX": -60.0,
+        "minY": -0.4,
+        "minZ": -45.0
+      }
+    },
+    {
+      "file": "public/models/districts/DISTRICT_H_URBAN_AXIS.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=5519164B bin=5392092B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=110084"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "13 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[110.0, 20.56, 64.3]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=-0.400（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 5519164,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 110084,
+      "materialCount": 13,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -55.0,
+          -0.4,
+          -32.15
+        ],
+        "max": [
+          55.0,
+          20.16,
+          32.15
+        ],
+        "size": [
+          110.0,
+          20.56,
+          64.3
+        ]
+      },
+      "ground": {
+        "minX": -55.0,
+        "minY": -0.4,
+        "minZ": -32.15
+      }
+    },
+    {
+      "file": "public/models/environment/ENV_LANDSCAPE_ASSETS.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=74696B bin=53208B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=1388"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "5 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[17.07, 4.24, 13.3]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=0.000（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 74696,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 1388,
+      "materialCount": 5,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -8.06,
+          0.0,
+          -7.0
+        ],
+        "max": [
+          9.014,
+          4.24,
+          6.3
+        ],
+        "size": [
+          17.074,
+          4.24,
+          13.3
+        ]
+      },
+      "ground": {
+        "minX": -8.06,
+        "minY": 0.0,
+        "minZ": -7.0
+      }
+    },
+    {
+      "file": "public/models/environment/ENV_TREE_CLUSTER.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=142028B bin=133212B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=2026"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "5 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[28.67, 8.44, 5.77]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=0.000（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 142028,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 2026,
+      "materialCount": 5,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -13.95,
+          0.0,
+          -2.73
+        ],
+        "max": [
+          14.717,
+          8.437,
+          3.043
+        ],
+        "size": [
+          28.667,
+          8.437,
+          5.773
+        ]
+      },
+      "ground": {
+        "minX": -13.95,
+        "minY": 0.0,
+        "minZ": -2.73
+      }
+    },
+    {
+      "file": "public/models/stations/STATION_MAIN.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=594852B bin=548160B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=9840"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "8 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[50, 6.3, 34.47]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=0.000（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 594852,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 9840,
+      "materialCount": 8,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -25,
+          0.0,
+          -5
+        ],
+        "max": [
+          25,
+          6.3,
+          29.467
+        ],
+        "size": [
+          50,
+          6.3,
+          34.467
+        ]
+      },
+      "ground": {
+        "minX": -25,
+        "minY": 0.0,
+        "minZ": -5
+      }
+    },
+    {
+      "file": "public/models/trains/TRAIN_CAR_01.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=57124B bin=48960B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=932"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "4 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[16.04, 3.78, 2.98]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=0.400（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 57124,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 932,
+      "materialCount": 4,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -8.02,
+          0.4,
+          -1.49
+        ],
+        "max": [
+          8.02,
+          4.18,
+          1.49
+        ],
+        "size": [
+          16.04,
+          3.78,
+          2.98
+        ]
+      },
+      "ground": {
+        "minX": -8.02,
+        "minY": 0.4,
+        "minZ": -1.49
+      }
+    },
+    {
+      "file": "public/models/trains/TRAIN_HEAD.glb",
+      "checks": {
+        "exists": {
+          "ok": true,
+          "msg": ""
+        },
+        "parsable": {
+          "ok": true,
+          "msg": "size=62876B bin=49728B"
+        },
+        "nonEmptyMesh": {
+          "ok": true,
+          "msg": "tris=1000"
+        },
+        "positions": {
+          "ok": true,
+          "msg": ""
+        },
+        "normals": {
+          "ok": true,
+          "msg": ""
+        },
+        "topology": {
+          "ok": true,
+          "msg": "无空索引"
+        },
+        "materials": {
+          "ok": true,
+          "msg": "6 材质均有 baseColor"
+        },
+        "noCameras": {
+          "ok": true,
+          "msg": ""
+        },
+        "noLights": {
+          "ok": true,
+          "msg": ""
+        },
+        "bounds": {
+          "ok": true,
+          "msg": "size=[17.69, 4.31, 2.97]"
+        },
+        "orientation": {
+          "ok": true,
+          "msg": "导出后 minY=0.400（yup 生效，地面基准合理）"
+        }
+      },
+      "ok": true,
+      "fileSize": 62876,
+      "generator": "Khronos glTF Blender I/O v5.4.6",
+      "triangleCount": 1000,
+      "materialCount": 6,
+      "textureCount": 0,
+      "boundingBox": {
+        "min": [
+          -8.52,
+          0.4,
+          -1.485
+        ],
+        "max": [
+          9.169,
+          4.712,
+          1.485
+        ],
+        "size": [
+          17.689,
+          4.312,
+          2.97
+        ]
+      },
+      "ground": {
+        "minX": -8.52,
+        "minY": 0.4,
+        "minZ": -1.485
+      }
+    }
+  ]
+}

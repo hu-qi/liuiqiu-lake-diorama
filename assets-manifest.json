@@ -1,0 +1,693 @@
+{
+  "project": "Huawei Lianqiu Lake Digital Diorama",
+  "version": "1.0",
+  "generatedBy": "blender/scripts/generate_manifest.py",
+  "assetCount": 17,
+  "verifiedCount": 17,
+  "assets": [
+    {
+      "assetId": "DISTRICT_A_HILLTOP",
+      "name": "山顶聚落 A 区",
+      "district": "A",
+      "sourceBlend": "blender/source/A_Hilltop.blend",
+      "outputGLB": "public/models/districts/DISTRICT_A_HILLTOP.glb",
+      "boundingBox": {
+        "min": [
+          -56.0,
+          -0.5,
+          -46.205
+        ],
+        "max": [
+          56.0,
+          37.036,
+          46.0
+        ],
+        "size": [
+          112.0,
+          37.536,
+          92.205
+        ]
+      },
+      "triangleCount": 44948,
+      "materialCount": 20,
+      "textureCount": 0,
+      "fileSize": 2513300,
+      "sourceReferences": [
+        "references/site-plan"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/A_HILLTOP_front.png",
+        "blender/renders/A_HILLTOP_side.png",
+        "blender/renders/A_HILLTOP_top.png",
+        "blender/renders/A_HILLTOP_three_quarter.png",
+        "blender/renders/A_HILLTOP_focus_three_quarter.png",
+        "blender/renders/A_HILLTOP_focus_front.png"
+      ],
+      "note": "v2 返修：改为层级台地山体(挡土墙)承载建筑；建筑成排窗+门厅+檐口；塔楼高宽比3.5:1并带竖向长窗；新增静态湖面+石岸+临湖观景平台栏杆；移除糖果色元素、树木全部落地并统一为ENV树型。"
+    },
+    {
+      "assetId": "DISTRICT_B_WATERTOWN",
+      "name": "水镇 B 区",
+      "district": "B",
+      "sourceBlend": "blender/source/B_Watertown.blend",
+      "outputGLB": "public/models/districts/DISTRICT_B_WATERTOWN.glb",
+      "boundingBox": {
+        "min": [
+          -45.0,
+          -1.0,
+          -30.0
+        ],
+        "max": [
+          45.0,
+          8.085,
+          30.0
+        ],
+        "size": [
+          90.0,
+          9.085,
+          60.0
+        ]
+      },
+      "triangleCount": 37846,
+      "materialCount": 14,
+      "textureCount": 0,
+      "fileSize": 2154160,
+      "sourceReferences": [
+        "references/site-plan"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/B_WATERTOWN_front.png",
+        "blender/renders/B_WATERTOWN_side.png",
+        "blender/renders/B_WATERTOWN_top.png",
+        "blender/renders/B_WATERTOWN_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "DISTRICT_C_URBAN_AXIS",
+      "name": "城市经典轴线 C 区",
+      "district": "C",
+      "sourceBlend": "blender/source/C_UrbanAxis.blend",
+      "outputGLB": "public/models/districts/DISTRICT_C_URBAN_AXIS.glb",
+      "boundingBox": {
+        "min": [
+          -55.0,
+          -0.4,
+          -32.81
+        ],
+        "max": [
+          55.0,
+          23.864,
+          32.81
+        ],
+        "size": [
+          110.0,
+          24.264,
+          65.62
+        ]
+      },
+      "triangleCount": 108050,
+      "materialCount": 13,
+      "textureCount": 0,
+      "fileSize": 5589832,
+      "sourceReferences": [
+        "references/architecture"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/C_URBAN_AXIS_front.png",
+        "blender/renders/C_URBAN_AXIS_side.png",
+        "blender/renders/C_URBAN_AXIS_top.png",
+        "blender/renders/C_URBAN_AXIS_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "DISTRICT_D_COLLEGE",
+      "name": "城市大学院落 D 区",
+      "district": "D",
+      "sourceBlend": "blender/source/D_College.blend",
+      "outputGLB": "public/models/districts/DISTRICT_D_COLLEGE.glb",
+      "boundingBox": {
+        "min": [
+          -60.0,
+          -0.4,
+          -45.0
+        ],
+        "max": [
+          60.0,
+          18.4,
+          49.0
+        ],
+        "size": [
+          120.0,
+          18.8,
+          94.0
+        ]
+      },
+      "triangleCount": 40264,
+      "materialCount": 15,
+      "textureCount": 0,
+      "fileSize": 2129796,
+      "sourceReferences": [
+        "references/architecture"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/D_COLLEGE_front.png",
+        "blender/renders/D_COLLEGE_side.png",
+        "blender/renders/D_COLLEGE_top.png",
+        "blender/renders/D_COLLEGE_three_quarter.png",
+        "blender/renders/D_COLLEGE_focus_three_quarter.png",
+        "blender/renders/D_COLLEGE_focus_front.png"
+      ],
+      "note": "v2 返修：两侧红砖配楼升级为 3 层，补成排窗框/拱廊入口/檐口，与主体楼学院式语言一致；主楼↔配楼加拱廊连廊。"
+    },
+    {
+      "assetId": "DISTRICT_E_FOREST_TOWN",
+      "name": "森林小镇 E 区",
+      "district": "E",
+      "sourceBlend": "blender/source/E_ForestTown.blend",
+      "outputGLB": "public/models/districts/DISTRICT_E_FOREST_TOWN.glb",
+      "boundingBox": {
+        "min": [
+          -55.0,
+          -0.4,
+          -40.0
+        ],
+        "max": [
+          55.0,
+          8.761,
+          40.861
+        ],
+        "size": [
+          110.0,
+          9.161,
+          80.861
+        ]
+      },
+      "triangleCount": 79776,
+      "materialCount": 19,
+      "textureCount": 0,
+      "fileSize": 4619808,
+      "sourceReferences": [
+        "references/landscape"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/E_FOREST_TOWN_front.png",
+        "blender/renders/E_FOREST_TOWN_side.png",
+        "blender/renders/E_FOREST_TOWN_top.png",
+        "blender/renders/E_FOREST_TOWN_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "DISTRICT_F_PLAZA_TOWN",
+      "name": "广场/港湾小镇 F 区",
+      "district": "F",
+      "sourceBlend": "blender/source/F_PlazaTown.blend",
+      "outputGLB": "public/models/districts/DISTRICT_F_PLAZA_TOWN.glb",
+      "boundingBox": {
+        "min": [
+          -55.06,
+          -0.4,
+          -41.7
+        ],
+        "max": [
+          55.06,
+          16.0,
+          40.0
+        ],
+        "size": [
+          110.12,
+          16.4,
+          81.7
+        ]
+      },
+      "triangleCount": 58058,
+      "materialCount": 15,
+      "textureCount": 0,
+      "fileSize": 3327928,
+      "sourceReferences": [
+        "references/landscape"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/F_PLAZA_TOWN_front.png",
+        "blender/renders/F_PLAZA_TOWN_side.png",
+        "blender/renders/F_PLAZA_TOWN_top.png",
+        "blender/renders/F_PLAZA_TOWN_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "DISTRICT_G_URBAN_BLOCKS",
+      "name": "城市街区 G 区",
+      "district": "G",
+      "sourceBlend": "blender/source/G_UrbanBlocks.blend",
+      "outputGLB": "public/models/districts/DISTRICT_G_URBAN_BLOCKS.glb",
+      "boundingBox": {
+        "min": [
+          -60.0,
+          -0.4,
+          -45.0
+        ],
+        "max": [
+          60.0,
+          20.9,
+          45.0
+        ],
+        "size": [
+          120.0,
+          21.3,
+          90.0
+        ]
+      },
+      "triangleCount": 74696,
+      "materialCount": 15,
+      "textureCount": 0,
+      "fileSize": 3822612,
+      "sourceReferences": [
+        "references/architecture"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/G_URBAN_BLOCKS_front.png",
+        "blender/renders/G_URBAN_BLOCKS_side.png",
+        "blender/renders/G_URBAN_BLOCKS_top.png",
+        "blender/renders/G_URBAN_BLOCKS_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "DISTRICT_H_URBAN_AXIS",
+      "name": "城市经典轴线 H 区",
+      "district": "H",
+      "sourceBlend": "blender/source/H_UrbanAxis.blend",
+      "outputGLB": "public/models/districts/DISTRICT_H_URBAN_AXIS.glb",
+      "boundingBox": {
+        "min": [
+          -55.0,
+          -0.4,
+          -32.15
+        ],
+        "max": [
+          55.0,
+          20.16,
+          32.15
+        ],
+        "size": [
+          110.0,
+          20.56,
+          64.3
+        ]
+      },
+      "triangleCount": 110084,
+      "materialCount": 13,
+      "textureCount": 0,
+      "fileSize": 5519164,
+      "sourceReferences": [
+        "references/architecture"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/H_URBAN_AXIS_front.png",
+        "blender/renders/H_URBAN_AXIS_side.png",
+        "blender/renders/H_URBAN_AXIS_top.png",
+        "blender/renders/H_URBAN_AXIS_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "ENV_LANDSCAPE_ASSETS",
+      "name": "环境景观小件合集",
+      "district": "environment",
+      "sourceBlend": "blender/source/LandscapeAssets.blend",
+      "outputGLB": "public/models/environment/ENV_LANDSCAPE_ASSETS.glb",
+      "boundingBox": {
+        "min": [
+          -8.06,
+          0.0,
+          -7.0
+        ],
+        "max": [
+          9.014,
+          4.24,
+          6.3
+        ],
+        "size": [
+          17.074,
+          4.24,
+          13.3
+        ]
+      },
+      "triangleCount": 1388,
+      "materialCount": 5,
+      "textureCount": 0,
+      "fileSize": 74696,
+      "sourceReferences": [
+        "references/landscape"
+      ],
+      "fidelityLevel": "L2",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/ENV_LANDSCAPE_front.png",
+        "blender/renders/ENV_LANDSCAPE_side.png",
+        "blender/renders/ENV_LANDSCAPE_top.png",
+        "blender/renders/ENV_LANDSCAPE_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "ENV_TREE_CLUSTER",
+      "name": "环境树木合集(5类)",
+      "district": "environment",
+      "sourceBlend": "blender/source/EnvTrees.blend",
+      "outputGLB": "public/models/environment/ENV_TREE_CLUSTER.glb",
+      "boundingBox": {
+        "min": [
+          -13.95,
+          0.0,
+          -2.73
+        ],
+        "max": [
+          14.717,
+          8.437,
+          3.043
+        ],
+        "size": [
+          28.667,
+          8.437,
+          5.773
+        ]
+      },
+      "triangleCount": 2026,
+      "materialCount": 5,
+      "textureCount": 0,
+      "fileSize": 142028,
+      "sourceReferences": [
+        "references/landscape"
+      ],
+      "fidelityLevel": "L2",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/ENV_TREES_front.png",
+        "blender/renders/ENV_TREES_side.png",
+        "blender/renders/ENV_TREES_top.png",
+        "blender/renders/ENV_TREES_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "LANDMARK_ARCH_BRIDGE",
+      "name": "拱桥",
+      "district": "landmark",
+      "sourceBlend": "blender/source/LANDMARK_ARCH_BRIDGE.blend",
+      "outputGLB": "public/models/bridges/LANDMARK_ARCH_BRIDGE.glb",
+      "boundingBox": {
+        "min": [
+          -27.5,
+          0.0,
+          -3.75
+        ],
+        "max": [
+          27.5,
+          7.988,
+          3.75
+        ],
+        "size": [
+          55.0,
+          7.988,
+          7.5
+        ]
+      },
+      "triangleCount": 1120,
+      "materialCount": 4,
+      "textureCount": 0,
+      "fileSize": 63092,
+      "sourceReferences": [
+        "references/bridges"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/ARCH_BRIDGE_front.png",
+        "blender/renders/ARCH_BRIDGE_side.png",
+        "blender/renders/ARCH_BRIDGE_top.png",
+        "blender/renders/ARCH_BRIDGE_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "LANDMARK_CAPSULE_CENTER",
+      "name": "湖景胶囊会议中心",
+      "district": "landmark",
+      "sourceBlend": "blender/source/LANDMARK_CAPSULE_CENTER.blend",
+      "outputGLB": "public/models/bridges/LANDMARK_CAPSULE_CENTER.glb",
+      "boundingBox": {
+        "min": [
+          -38.06,
+          0.0,
+          -17.0
+        ],
+        "max": [
+          38.06,
+          11.98,
+          17.0
+        ],
+        "size": [
+          76.12,
+          11.98,
+          34.0
+        ]
+      },
+      "triangleCount": 4620,
+      "materialCount": 5,
+      "textureCount": 0,
+      "fileSize": 272696,
+      "sourceReferences": [
+        "references/architecture"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/CAPSULE_CENTER_front.png",
+        "blender/renders/CAPSULE_CENTER_side.png",
+        "blender/renders/CAPSULE_CENTER_top.png",
+        "blender/renders/CAPSULE_CENTER_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "LANDMARK_MOON_BRIDGE",
+      "name": "月亮桥",
+      "district": "landmark",
+      "sourceBlend": "blender/source/LANDMARK_MOON_BRIDGE.blend",
+      "outputGLB": "public/models/bridges/LANDMARK_MOON_BRIDGE.glb",
+      "boundingBox": {
+        "min": [
+          -10.359,
+          0.0,
+          -3.0
+        ],
+        "max": [
+          10.359,
+          8.09,
+          3.0
+        ],
+        "size": [
+          20.717,
+          8.09,
+          6.0
+        ]
+      },
+      "triangleCount": 1988,
+      "materialCount": 3,
+      "textureCount": 0,
+      "fileSize": 108200,
+      "sourceReferences": [
+        "references/bridges"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/MOON_BRIDGE_front.png",
+        "blender/renders/MOON_BRIDGE_side.png",
+        "blender/renders/MOON_BRIDGE_top.png",
+        "blender/renders/MOON_BRIDGE_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "LANDMARK_RAINBOW_BRIDGE",
+      "name": "彩虹桥",
+      "district": "landmark",
+      "sourceBlend": "blender/source/LANDMARK_RAINBOW_BRIDGE.blend",
+      "outputGLB": "public/models/bridges/LANDMARK_RAINBOW_BRIDGE.glb",
+      "boundingBox": {
+        "min": [
+          -18.06,
+          -0.0,
+          -5.5
+        ],
+        "max": [
+          18.06,
+          10.727,
+          5.5
+        ],
+        "size": [
+          36.12,
+          10.727,
+          11.0
+        ]
+      },
+      "triangleCount": 2356,
+      "materialCount": 9,
+      "textureCount": 0,
+      "fileSize": 110400,
+      "sourceReferences": [
+        "references/bridges"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/RAINBOW_BRIDGE_front.png",
+        "blender/renders/RAINBOW_BRIDGE_side.png",
+        "blender/renders/RAINBOW_BRIDGE_top.png",
+        "blender/renders/RAINBOW_BRIDGE_three_quarter.png"
+      ],
+      "note": "v2 返修：改为多层同心圆弧拱圈(径向彩虹分层)的真实承重结构；拱脚嵌入两端桥台、拱顶托住桥面；拱洞经射线验证沿桥宽真实贯通。"
+    },
+    {
+      "assetId": "STATION_MAIN",
+      "name": "主车站",
+      "district": "station",
+      "sourceBlend": "blender/source/STATION_MAIN.blend",
+      "outputGLB": "public/models/stations/STATION_MAIN.glb",
+      "boundingBox": {
+        "min": [
+          -25,
+          0.0,
+          -5
+        ],
+        "max": [
+          25,
+          6.3,
+          29.467
+        ],
+        "size": [
+          50,
+          6.3,
+          34.467
+        ]
+      },
+      "triangleCount": 9840,
+      "materialCount": 8,
+      "textureCount": 0,
+      "fileSize": 594852,
+      "sourceReferences": [
+        "references/train"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/STATION_MAIN_front.png",
+        "blender/renders/STATION_MAIN_side.png",
+        "blender/renders/STATION_MAIN_top.png",
+        "blender/renders/STATION_MAIN_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "TRAIN_CAR_01",
+      "name": "园区小火车车厢",
+      "district": "train",
+      "sourceBlend": "blender/source/TRAIN_CAR_01.blend",
+      "outputGLB": "public/models/trains/TRAIN_CAR_01.glb",
+      "boundingBox": {
+        "min": [
+          -8.02,
+          0.4,
+          -1.49
+        ],
+        "max": [
+          8.02,
+          4.18,
+          1.49
+        ],
+        "size": [
+          16.04,
+          3.78,
+          2.98
+        ]
+      },
+      "triangleCount": 932,
+      "materialCount": 4,
+      "textureCount": 0,
+      "fileSize": 57124,
+      "sourceReferences": [
+        "references/train"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/TRAIN_CAR_01_front.png",
+        "blender/renders/TRAIN_CAR_01_side.png",
+        "blender/renders/TRAIN_CAR_01_top.png",
+        "blender/renders/TRAIN_CAR_01_three_quarter.png"
+      ],
+      "note": ""
+    },
+    {
+      "assetId": "TRAIN_HEAD",
+      "name": "园区小火车车头",
+      "district": "train",
+      "sourceBlend": "blender/source/TRAIN_HEAD.blend",
+      "outputGLB": "public/models/trains/TRAIN_HEAD.glb",
+      "boundingBox": {
+        "min": [
+          -8.52,
+          0.4,
+          -1.485
+        ],
+        "max": [
+          9.169,
+          4.712,
+          1.485
+        ],
+        "size": [
+          17.689,
+          4.312,
+          2.97
+        ]
+      },
+      "triangleCount": 1000,
+      "materialCount": 6,
+      "textureCount": 0,
+      "fileSize": 62876,
+      "sourceReferences": [
+        "references/train"
+      ],
+      "fidelityLevel": "L3",
+      "verified": true,
+      "renderPreviews": [
+        "blender/renders/TRAIN_HEAD_front.png",
+        "blender/renders/TRAIN_HEAD_side.png",
+        "blender/renders/TRAIN_HEAD_top.png",
+        "blender/renders/TRAIN_HEAD_three_quarter.png"
+      ],
+      "note": ""
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "capturedAt": "2026-10-22T06:42:09.390Z",
+  "batched": {
+    "drawCalls": 265,
+    "triangles": 928144,
+    "fps": 10,
+    "meshReport": {
+      "districts": {
+        "DISTRICT_A_HILLTOP": {
+          "meshesBefore": 268,
+          "meshesAfter": 20,
+          "groups": 20,
+          "skipped": 0
+        },
+        "DISTRICT_B_WATERTOWN": {
+          "meshesBefore": 362,
+          "meshesAfter": 14,
+          "groups": 14,
+          "skipped": 0
+        },
+        "DISTRICT_C_URBAN_AXIS": {
+          "meshesBefore": 327,
+          "meshesAfter": 13,
+          "groups": 13,
+          "skipped": 0
+        },
+        "DISTRICT_D_COLLEGE": {
+          "meshesBefore": 188,
+          "meshesAfter": 15,
+          "groups": 15,
+          "skipped": 0
+        },
+        "DISTRICT_E_FOREST_TOWN": {
+          "meshesBefore": 517,
+          "meshesAfter": 19,
+          "groups": 19,
+          "skipped": 0
+        },
+        "DISTRICT_F_PLAZA_TOWN": {
+          "meshesBefore": 375,
+          "meshesAfter": 15,
+          "groups": 15,
+          "skipped": 0
+        },
+        "DISTRICT_G_URBAN_BLOCKS": {
+          "meshesBefore": 259,
+          "meshesAfter": 15,
+          "groups": 15,
+          "skipped": 0
+        },
+        "DISTRICT_H_URBAN_AXIS": {
+          "meshesBefore": 216,
+          "meshesAfter": 13,
+          "groups": 13,
+          "skipped": 0
+        }
+      },
+      "landmarks": {
+        "LANDMARK_MOON_BRIDGE": {
+          "meshesBefore": 4,
+          "meshesAfter": 3,
+          "groups": 3,
+          "skipped": 0
+        },
+        "LANDMARK_RAINBOW_BRIDGE": {
+          "meshesBefore": 11,
+          "meshesAfter": 9,
+          "groups": 9,
+          "skipped": 0
+        },
+        "LANDMARK_ARCH_BRIDGE": {
+          "meshesBefore": 7,
+          "meshesAfter": 4,
+          "groups": 4,
+          "skipped": 0
+        },
+        "LANDMARK_CAPSULE_CENTER": {
+          "meshesBefore": 58,
+          "meshesAfter": 5,
+          "groups": 5,
+          "skipped": 0
+        },
+        "STATION_MAIN": {
+          "meshesBefore": 74,
+          "meshesAfter": 8,
+          "groups": 8,
+          "skipped": 0
+        },
+        "ENV_LANDSCAPE_ASSETS": {
+          "meshesBefore": 33,
+          "meshesAfter": 5,
+          "groups": 5,
+          "skipped": 0
+        }
+      },
+      "totalBefore": 2699,
+      "totalAfter": 158
+    }
+  },
+  "unbatched": {
+    "drawCalls": 2863,
+    "triangles": 928144,
+    "fps": 10,
+    "meshReport": {
+      "districts": {
+        "DISTRICT_A_HILLTOP": {
+          "meshesBefore": 268,
+          "meshesAfter": 268,
+          "groups": 0,
+          "skipped": 0
+        },
+        "DISTRICT_B_WATERTOWN": {
+          "meshesBefore": 362,
+          "meshesAfter": 362,
+          "groups": 0,
+          "skipped": 0
+        },
+        "DISTRICT_C_URBAN_AXIS": {
+          "meshesBefore": 327,
+          "meshesAfter": 327,
+          "groups": 0,
+          "skipped": 0
+        },
+        "DISTRICT_D_COLLEGE": {
+          "meshesBefore": 188,
+          "meshesAfter": 188,
+          "groups": 0,
+          "skipped": 0
+        },
+        "DISTRICT_E_FOREST_TOWN": {
+          "meshesBefore": 517,
+          "meshesAfter": 517,
+          "groups": 0,
+          "skipped": 0
+        },
+        "DISTRICT_F_PLAZA_TOWN": {
+          "meshesBefore": 375,
+          "meshesAfter": 375,
+          "groups": 0,
+          "skipped": 0
+        },
+        "DISTRICT_G_URBAN_BLOCKS": {
+          "meshesBefore": 259,
+          "meshesAfter": 259,
+          "groups": 0,
+          "skipped": 0
+        },
+        "DISTRICT_H_URBAN_AXIS": {
+          "meshesBefore": 216,
+          "meshesAfter": 216,
+          "groups": 0,
+          "skipped": 0
+        }
+      },
+      "landmarks": {
+        "LANDMARK_MOON_BRIDGE": {
+          "meshesBefore": 4,
+          "meshesAfter": 4,
+          "groups": 0,
+          "skipped": 0
+        },
+        "LANDMARK_RAINBOW_BRIDGE": {
+          "meshesBefore": 11,
+          "meshesAfter": 11,
+          "groups": 0,
+          "skipped": 0
+        },
+        "LANDMARK_ARCH_BRIDGE": {
+          "meshesBefore": 7,
+          "meshesAfter": 7,
+          "groups": 0,
+          "skipped": 0
+        },
+        "LANDMARK_CAPSULE_CENTER": {
+          "meshesBefore": 58,
+          "meshesAfter": 58,
+          "groups": 0,
+          "skipped": 0
+        },
+        "STATION_MAIN": {
+          "meshesBefore": 74,
+          "meshesAfter": 74,
+          "groups": 0,
+          "skipped": 0
+        },
+        "ENV_LANDSCAPE_ASSETS": {
+          "meshesBefore": 33,
+          "meshesAfter": 33,
+          "groups": 0,
+          "skipped": 0
+        }
+      },
+      "totalBefore": 2699,
+      "totalAfter": 2699
+    }
+  }
+}

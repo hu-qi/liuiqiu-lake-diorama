@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": false,
+    "noEmit": true,
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": false,
+
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "types": ["vite/client", "node"]
+  },
+  "include": ["src", "tests", "vite.config.ts", "vitest.config.ts", "playwright.config.ts"]
+}
